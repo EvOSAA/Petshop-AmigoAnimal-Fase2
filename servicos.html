@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop Amigo Animal - Serviços</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="mb-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo-link">
+                <img src="img/logoAA.png" alt="Logo do Petshop Amigo Animal: um cachorro e um gato sorrindo" class="img-fluid">
+            </a>
+            <h1>Nossos Serviços</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow">
+                    <img src="img/banho.jpg" class="card-img-top" alt="Destacando o serviço de Banho Completo.">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Banho Completo</h5>
+                        <p class="card-text">Higiene completa com shampoo hipoalergênico, corte de unhas e limpeza de ouvidos. Seu pet limpo e cheiroso!</p>
+                        <a href="agendamento.html" class="btn btn-outline-success">Agendar Banho</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow">
+                    <img src="img/tosa.jpg" class="card-img-top" alt="Destacando o serviço de Tosa.">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Tosa Padrão e Estilizada</h5>
+                        <p class="card-text">Tosa higiênica, na máquina ou na tesoura, de acordo com a raça e o seu desejo. Conforto e estilo garantidos.</p>
+                        <a href="agendamento.html" class="btn btn-outline-success">Agendar Tosa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow">
+                    <img src="img/telebusca.jpg" class="card-img-top" alt="Veículo de transporte de pet seguro, representando a Tele-busca.">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Tele-busca e Entrega</h5>
+                        <p class="card-text">Buscamos e levamos seu pet com total segurança e conforto. Agende o horário no formulário!</p>
+                        <a href="agendamento.html" class="btn btn-outline-primary">Ver Agendamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Localização</h3>
+                    <p>Rua dos Animais, 123 - Centro</p>
+                    <p>Porto Alegre - RS</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p>Telefone: (51) 3456-7890</p>
+                    <p>E-mail: contato@petshopamigoanimal.com.br</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sábado</p>
+                    <p>Das 8h às 20h</p>
+                </div>
+            </div>
+
+            <div class="copy">
+                <p>&copy; 2025 Petshop Amigo Animal. Todos os direitos reservados.</p>
+                <p>Desenvolvido para a disciplina Fundamentos de Sistemas Web.</p>
+				<p>Degign By EvOSAA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // COMENTÁRIO: Função para Destacar a Página Ativa no Menu (Aula 8)
+        const links = document.querySelectorAll('.nav-link');
+        const currentPage = window.location.pathname.split('/').pop();
+        
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active'); // Adiciona a classe 'active' do Bootstrap
+            }
+        });
+    </script>
+</body>
+</html>

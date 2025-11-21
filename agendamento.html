@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop Amigo Animal - Agendamento</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="mb-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo-link">
+                <img src="img/logoAA.png" alt="Logo do Petshop Amigo Animal: um cachorro e um gato sorrindo"
+                    class="img-fluid">
+            </a>
+            <h1>Agendamento de Serviços</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <section class="form-section p-4">
+            <h2 class="text-center mb-4">Preencha os Dados para Agendar</h2>
+
+            <form id="formAgendamento" class="needs-validation" novalidate>
+                <fieldset class="mb-5 p-3 border rounded">
+                    <legend class="float-none w-auto px-2 fs-5">Dados do Cliente</legend>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nomeCliente" class="form-label">Nome Completo *</label>
+                            <input type="text" class="form-control" id="nomeCliente" name="nomeCliente"
+                                placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cpf" class="form-label">CPF *</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="emailCliente" class="form-label">E-mail *</label>
+                            <input type="email" class="form-control" id="emailCliente" name="emailCliente"
+                                placeholder="seu.email@exemplo.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefone" class="form-label">Telefone *</label>
+                            <input type="tel" class="form-control" id="telefone" name="telefone"
+                                placeholder="(XX) XXXXX-XXXX" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="endereco" class="form-label">Endereço (Rua e Número) *</label>
+                            <input type="text" class="form-control" id="endereco" name="endereco"
+                                placeholder="Ex: Rua das Flores, 100" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="sexo" class="form-label">Sexo</label>
+                            <select id="sexo" name="sexo" class="form-select">
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="F">Feminino</option>
+                                <option value="M">Masculino</option>
+                                <option value="O">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-5 p-3 border rounded">
+                    <legend class="float-none w-auto px-2 fs-5">Dados do Pet</legend>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="nomePet" class="form-label">Nome do Pet *</label>
+                            <input type="text" class="form-control" id="nomePet" name="nomePet"
+                                placeholder="Nome do seu pet" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="racaPet" class="form-label">Raça *</label>
+                            <input type="text" class="form-control" id="racaPet" name="racaPet"
+                                placeholder="Ex: Poodle, Persa" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="idadePet" class="form-label">Idade do Pet (Anos) *</label>
+                            <input type="number" class="form-control" id="idadePet" name="idadePet" min="0"
+                                placeholder="0 a 20" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-5 p-3 border rounded">
+                    <legend class="float-none w-auto px-2 fs-5">Serviço e Agendamento</legend>
+
+                    <div class="mb-4">
+                        <label class="form-label d-block">Serviços Desejados *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="servicoBanho" name="servicos"
+                                value="banho" required>
+                            <label class="form-check-label" for="servicoBanho">Banho</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="servicoTosa" name="servicos"
+                                value="tosa">
+                            <label class="form-check-label" for="servicoTosa">Tosa</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Atendimento Vet." name="servicos"
+                                value="Vet">
+                            <label class="form-check-label" for="Atendimento Vet.">Atendimento veterinário</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label d-block">Método de Agendamento *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="metodoAgendamento" id="metodoTelebusca"
+                                value="telebusca" required>
+                            <label class="form-check-label" for="metodoTelebusca">Tele-busca (Busca e Entrega em
+                                Casa)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="metodoAgendamento"
+                                id="metodoEntregaLocal" value="entregaLocal">
+                            <label class="form-check-label" for="metodoEntregaLocal">Entrega do Pet no Local</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="dataAgendamento" class="form-label">Dia do Agendamento *</label>
+                            <input type="date" class="form-control" id="dataAgendamento" name="dataAgendamento"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="horaAgendamento" class="form-label">Horário Desejado *</label>
+                            <input type="time" class="form-control" id="horaAgendamento" name="horaAgendamento"
+                                min="08:00" max="20:00" required>
+                            <small class="form-text text-muted">Horário de 8:00h às 20:00h</small>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Confirmar Agendamento</button>
+                    <a href="https://wa.me/5551998674923?text=Olá,%20gostaria%20de%20agendar%20um%20serviço."
+                        class="btn btn-success btn-lg ms-2" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Agendar pelo WhatsApp
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Localização</h3>
+                    <p>Rua dos Animais, 123 - Centro</p>
+                    <p>Porto Alegre - RS</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p>Telefone: (51) 3456-7890</p>
+                    <p>E-mail: contato@petshopamigoanimal.com.br</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sábado</p>
+                    <p>Das 8h às 20h</p>
+                </div>
+            </div>
+
+            <div class="copy">
+                <p>&copy; 2025 Petshop Amigo Animal. Todos os direitos reservados.</p>
+                <p>Desenvolvido para a disciplina Fundamentos de Sistemas Web.</p>
+                <p>Design By EvOSAA</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5551998674923" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // COMENTÁRIO: Função para Destacar a Página Ativa no Menu (Aula 8)
+        const links = document.querySelectorAll('.nav-link');
+        const currentPage = window.location.pathname.split('/').pop();
+
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active'); // Adiciona a classe 'active' do Bootstrap
+            }
+        });
+
+        // ⚠️ NOVA FUNÇÃO: Manipular o Envio para usar mailto: e exibir o alerta.
+        const form = document.getElementById('formAgendamento');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // 1. Validação
+            if (!form.checkValidity()) {
+                event.stopPropagation();
+                form.classList.add('was-validated');
+                return;
+            }
+            form.classList.add('was-validated');
+
+            // 2. Coletar dados do formulário
+            const nome = document.getElementById('nomeCliente').value;
+            const cpf = document.getElementById('cpf').value;
+            const email = document.getElementById('emailCliente').value;
+            const telefone = document.getElementById('telefone').value;
+            const endereco = document.getElementById('endereco').value;
+            const sexoSelect = document.getElementById('sexo');
+            const sexo = sexoSelect.options[sexoSelect.selectedIndex].text;
+
+            const nomePet = document.getElementById('nomePet').value;
+            const racaPet = document.getElementById('racaPet').value;
+            const idadePet = document.getElementById('idadePet').value;
+
+            // Coletar Serviços (checkboxes)
+            const servicosSelecionados = [];
+            document.querySelectorAll('input[name="servicos"]:checked').forEach(checkbox => {
+                // Tenta pegar o texto do label associado
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) servicosSelecionados.push(label.innerText);
+            });
+
+            // Coletar Método (radio)
+            const metodoInput = document.querySelector('input[name="metodoAgendamento"]:checked');
+            let metodoLabel = 'Não informado';
+            if (metodoInput) {
+                const label = document.querySelector(`label[for="${metodoInput.id}"]`);
+                if (label) metodoLabel = label.innerText;
+            }
+
+            const data = document.getElementById('dataAgendamento').value;
+            const hora = document.getElementById('horaAgendamento').value;
+
+            // 3. Formatar corpo do e-mail
+            const assunto = "Novo Agendamento Online - " + nome;
+            const corpo = `
+Olá, gostaria de solicitar um agendamento:
+
+--- DADOS DO CLIENTE ---
+Nome: ${nome}
+CPF: ${cpf}
+E-mail: ${email}
+Telefone: ${telefone}
+Endereço: ${endereco}
+Sexo: ${sexo}
+
+--- DADOS DO PET ---
+Nome: ${nomePet}
+Raça: ${racaPet}
+Idade: ${idadePet} anos
+
+--- SERVIÇO E AGENDAMENTO ---
+Serviços: ${servicosSelecionados.join(', ')}
+Método: ${metodoLabel}
+Data: ${data}
+Hora: ${hora}
+
+Aguardo confirmação. Obrigado!
+            `.trim();
+
+            // 4. Criar link mailto e abrir
+            const mailtoLink = "mailto:everson.oliveira1980@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}";
+
+            alert('✅ Dados validados! Vamos abrir seu aplicativo de e-mail para você enviar a solicitação.');
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+
+</html>

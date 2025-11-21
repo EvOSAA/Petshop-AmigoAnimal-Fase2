@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+
+/* style.css - Arquivo de Estilos Customizados */
+
+/* Estilo base */
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: "Croissant One", serif;
+}
+
+/* Estilo do Cabeçalho e Logo */
+header {
+    background: linear-gradient(90deg, #007bff, #0073b6);
+    color: #FFFFE0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo-link img {
+    max-height: 300px;
+    width: auto;
+}
+
+/* Navegação */
+.navbar {
+    background-color: #07c !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Destaque para o link ativo (usado por JS) e hover */
+.nav-link:hover,
+.nav-link.active {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Estilo do Formulário */
+.form-section {
+    padding: 40px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 255, 0.1);
+}
+
+.form-check-label {
+    margin-right: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #bbb;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+footer .copy {
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+    color: white;
+}
+
+.whatsapp-icon {
+    margin-top: 2px;
+}

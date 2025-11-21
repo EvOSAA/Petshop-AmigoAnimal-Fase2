@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop Amigo Animal - Início</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="mb-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo-link">
+                <img src="img/logoAA.png" alt="Logo do Petshop Amigo Animal: um cachorro e um gato sorrindo"
+                    class="img-fluid">
+            </a>
+            <h1>Seja Bem-vindo!</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <section id="petCarousel" class="carousel slide mb-1" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slide1.jpg" class="d-block w-100"
+                        alt="Um cachorro feliz após o banho, representando os serviços de banho e tosa.">
+                    <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded">
+                        <h5>Banho e Tosa Profissionais</h5>
+                        <p>Seu pet limpo, cheiroso e feliz!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide2.jpg" class="d-block w-100"
+                        alt="Diversos brinquedos e acessórios para pets, destacando a seção de produtos.">
+                    <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded">
+                        <h5>Acessórios e Ração de Qualidade</h5>
+                        <p>Tudo que seu melhor amigo precisa.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide3.jpg" class="d-block w-100"
+                        alt="Veterinário examinando um gato, representando o cuidado com a saúde animal.">
+                    <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded">
+                        <h5>Atendimento Veterinário</h5>
+                        <p>Cuidado e saúde em primeiro lugar.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </section>
+
+        <section id="sobre" class="text-center">
+            <h2>Quem Somos</h2>
+            <p class="lead">O Petshop Amigo Animal nasceu da paixão por cuidar. Oferecemos os melhores serviços e
+                produtos para garantir a saúde e alegria do seu pet.</p>
+            <p>Agende um serviço ou venha nos visitar!</p>
+            <a href="agendamento.html" class="btn btn-success btn-lg mt-3">Agende Agora!</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Localização</h3>
+                    <p>Rua dos Animais, 123 - Centro</p>
+                    <p>Porto Alegre - RS</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p>Telefone: (51) 3456-7890</p>
+                    <p>E-mail: contato@petshopamigoanimal.com.br</p>
+                    <p id="dataHoraAtual">Data/Hora: Carregando...</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sábado</p>
+                    <p>Das 8h às 20h</p>
+                </div>
+            </div>
+
+            <div class="copy">
+                <p>&copy; 2025 Petshop Amigo Animal. Todos os direitos reservados.</p>
+                <p>Desenvolvido para a disciplina Fundamentos de Sistemas Web.</p>
+                <p>Design By EvOSAA</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5551999999999" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // COMENTÁRIO: Função para Destacar a Página Ativa no Menu (Aula 8)
+        const links = document.querySelectorAll('.nav-link');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html'; // Pega o nome do arquivo atual
+
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active'); // Adiciona a classe 'active' do Bootstrap
+            }
+        });
+
+        // COMENTÁRIO: Função Temporal - Mostrar Data e Hora Atual (Aula 8)
+        function exibirDataHora() {
+            const dataAtual = new Date();
+            const opcoes = {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            };
+            const formatoData = dataAtual.toLocaleDateString('pt-BR', opcoes);
+            document.getElementById('dataHoraAtual').innerHTML = `Data/Hora: ${formatoData}`;
+        }
+
+        exibirDataHora();
+        setInterval(exibirDataHora, 1000); // Atualiza a cada segundo
+    </script>
+</body>
+
+</html>
